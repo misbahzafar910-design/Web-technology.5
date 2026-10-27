@@ -1,0 +1,417 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+    <title>World Explorer</title> 
+ 
+    <style> 
+ 
+        * { 
+            box-sizing: border-box; 
+        } 
+ 
+        body { 
+            margin: 0; 
+            font-family: Georgia, "Times New Roman", serif; 
+            background: #102a43; 
+            color: white; 
+        } 
+ 
+        header { 
+            background: #f4b400; 
+            text-align: center; 
+            padding: 25px; 
+            color: #102a43; 
+        } 
+ 
+        header h1 { 
+            margin: 0; 
+            font-size: 38px; 
+            letter-spacing: 3px; 
+        } 
+ 
+        header p { 
+            margin: 8px; 
+            color: #102a43; 
+        } 
+ 
+        section { 
+            min-height: 85vh; 
+            padding: 35px 20px; 
+            text-align: center; 
+        } 
+ 
+        h2 { 
+            color: #f4b400; 
+            font-size: 32px; 
+        } 
+ 
+        .description { 
+            max-width: 800px; 
+            margin: auto; 
+            line-height: 1.6; 
+            color: white; 
+        } 
+ 
+        .mapbox { 
+            position: relative; 
+            max-width: 1250px; 
+            margin: 30px auto; 
+            background: white; 
+            padding: 20px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px #0008; 
+        } 
+ 
+        .mapbox img { 
+            width: 100%; 
+            display: block; 
+            border-radius: 12px; 
+        } 
+ 
+        .asia-link { 
+            position: absolute; 
+            left: 58%; 
+            top: 8%; 
+            width: 37%; 
+            height: 62%; 
+            display: block; 
+            background: transparent; 
+            border-radius: 50%; 
+        } 
+ 
+        .asia-link:hover { 
+            background: #f4b40055; 
+            border: 3px solid #f4b400; 
+        } 
+ 
+        .back { 
+            display: inline-block; 
+            padding: 13px 25px; 
+            margin-top: 15px; 
+            border-radius: 30px; 
+            background: #f4b400; 
+            color: #102a43; 
+            text-decoration: none; 
+            font-weight: bold; 
+        } 
+ 
+        .back:hover { 
+            background: #ffd166; 
+        } 
+ 
+        .country-links { 
+            max-width: 850px; 
+            margin: 25px auto; 
+        } 
+ 
+        .country-links a { 
+            display: inline-block; 
+            text-decoration: none; 
+            color: #102a43; 
+            background: #f4b400; 
+            padding: 15px 30px; 
+            margin: 8px; 
+            border-radius: 30px; 
+            font-weight: bold; 
+        } 
+ 
+        .country-links a:hover { 
+            background: #ffd166; 
+        } 
+ 
+        .country-page { 
+            max-width: 900px; 
+            margin: 30px auto; 
+            background: white; 
+            color: #102a43; 
+            padding: 35px; 
+            border-radius: 20px; 
+            box-shadow: 0 12px 35px #0009; 
+        } 
+ 
+        .country-page h3 { 
+            color: #d18b00; 
+            font-size: 35px; 
+        } 
+ 
+        .country-page audio { 
+            width: 80%; 
+            margin-top: 10px; 
+        } 
+ 
+        #asia, 
+        #pakistan, 
+        #india, 
+        #saudi { 
+            display: none; 
+        } 
+ 
+        #asia:target, 
+        #pakistan:target, 
+        #india:target, 
+        #saudi:target { 
+            display: block; 
+        } 
+ 
+        #asia:target ~ #home, 
+        #pakistan:target ~ #home, 
+        #india:target ~ #home, 
+        #saudi:target ~ #home { 
+            display: none; 
+        } 
+ 
+        @media(max-width:700px) { 
+ 
+            header h1 { 
+                font-size: 27px; 
+            } 
+ 
+            h2 { 
+                font-size: 25px; 
+            } 
+ 
+            .mapbox { 
+                padding: 8px; 
+            } 
+ 
+            .asia-link { 
+                left: 55%; 
+                top: 8%; 
+                width: 42%; 
+                height: 65%; 
+            } 
+ 
+        } 
+ 
+    </style> 
+ 
+</head> 
+ 
+ 
+<body> 
+ 
+ 
+<header> 
+ 
+    <h1>🌍 WORLD EXPLORER</h1> 
+ 
+    <p> 
+        Explore the World • Discover Asia • Learn About Pakistan 
+    </p> 
+ 
+</header> 
+ 
+ 
+<!-- ================= WORLD PAGE ================= --> 
+ 
+<section id="home"> 
+ 
+    <h2>Explore the World</h2> 
+ 
+    <p class="description"> 
+        Welcome to World Explorer. Explore different continents 
+        and discover countries around the world. 
+        Click on Asia to continue. 
+    </p> 
+ 
+ 
+    <section class="mapbox"> 
+ 
+        <!-- WORLD MAP --> 
+        <img src="continent map.jpg" alt="World Map"> 
+ 
+        <a href="#asia" 
+           class="asia-link" 
+           title="Click to Explore Asia"> 
+        </a> 
+ 
+    </section> 
+ 
+ 
+    <p> 
+        👆 Click on the Asia region of the map 
+    </p> 
+ 
+</section> 
+ 
+ 
+ 
+<!-- ================= ASIA PAGE ================= --> 
+ 
+<section id="asia"> 
+ 
+    <h2>🌏 Explore Asia</h2> 
+ 
+    <p class="description"> 
+        Asia is the largest continent in the world. 
+        Explore countries such as Pakistan, India and Saudi Arabia. 
+    </p> 
+ 
+ 
+    <section class="mapbox"> 
+ 
+        <!-- ASIA MAP --> 
+        <img src="Geo-Map-of-Asia.png" alt="Map of Asia"> 
+ 
+    </section> 
+ 
+ 
+    <h3>Select a Country</h3> 
+ 
+ 
+    <nav class="country-links"> 
+ 
+        <a href="#pakistan"> 
+            🇵🇰 Pakistan 
+        </a> 
+ 
+        <a href="#india"> 
+            🇮🇳 India 
+        </a> 
+ 
+        <a href="#saudi"> 
+            🇸🇦 Saudi Arabia 
+        </a> 
+ 
+    </nav> 
+ 
+ 
+    <a href="#home" class="back"> 
+        ← Back to World 
+    </a> 
+ 
+</section> 
+ 
+ 
+ 
+<!-- ================= PAKISTAN PAGE ================= --> 
+ 
+<section id="pakistan"> 
+ 
+    <h2>🇵🇰 Pakistan</h2> 
+ 
+ 
+    <p class="description"> 
+ 
+        Welcome to Pakistan. Discover its culture, 
+        national identity and history. 
+ 
+    </p> 
+ 
+ 
+    <section class="country-page"> 
+ 
+        <h3>PAKISTAN</h3> 
+ 
+        <p> 
+            Pakistan is a beautiful country located in South Asia. 
+            It became an independent country on 14 August 1947. 
+        </p> 
+ 
+ 
+        <!-- PAKISTAN MAP --> 
+ 
+        <img src="Geo-Map-of-Asia.png" 
+             alt="Pakistan in Asia" 
+             width="300"> 
+ 
+ 
+        <br><br> 
+ 
+ 
+        <!-- NATIONAL ANTHEM --> 
+ 
+        <h3>🎵 National Anthem of Pakistan</h3> 
+ 
+        <p> 
+            Listen to the National Anthem of Pakistan 
+        </p> 
+ 
+        <audio controls autoplay> 
+ 
+            <source src="national-anthem.mp3" 
+                    type="audio/mpeg"> 
+ 
+            Your browser does not support audio. 
+ 
+        </audio> 
+ 
+    </section> 
+ 
+ 
+    <a href="#asia" class="back"> 
+        ← Back to Asia 
+    </a> 
+ 
+</section> 
+ 
+ 
+ 
+<!-- ================= INDIA PAGE ================= --> 
+ 
+<section id="india"> 
+ 
+    <h2>🇮🇳 India</h2> 
+ 
+ 
+    <section class="country-page"> 
+ 
+        <h3>INDIA</h3> 
+ 
+        <p> 
+            India is a country located in South Asia. 
+        </p> 
+ 
+    </section> 
+ 
+ 
+    <a href="#asia" class="back"> 
+        ← Back to Asia 
+    </a> 
+ 
+</section> 
+ 
+ 
+ 
+<!-- ================= SAUDI ARABIA PAGE ================= --> 
+ 
+<section id="saudi"> 
+ 
+    <h2>🇸🇦 Saudi Arabia</h2> 
+ 
+ 
+    <section class="country-page"> 
+ 
+        <h3>SAUDI ARABIA</h3> 
+ 
+        <p> 
+            Saudi Arabia is a country located in Western Asia. 
+        </p> 
+ 
+    </section> 
+ 
+ 
+    <a href="#asia" class="back"> 
+        ← Back to Asia 
+    </a> 
+ 
+</section> 
+ 
+ 
+ 
+<footer> 
+ 
+    <p align="center"> 
+        © 2026 World Explorer 
+    </p> 
+ 
+</footer> 
+ 
+ 
+</body> 
+ 
+</html>
